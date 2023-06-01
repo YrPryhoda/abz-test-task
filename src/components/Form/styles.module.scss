@@ -1,0 +1,95 @@
+@import "../../assets/styles/variables.scss";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    width: 100%;
+    margin-top: 25px;
+
+    &__field {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    &__item {
+        border: 1px solid #d0cfcf;
+        background-color: transparent;
+        border-radius: 4px;
+        padding: 14px 16px;
+        width: 100%;
+    }
+
+    &__mt0 {
+        margin-top: 0;
+    }
+
+    &__item_disabled {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        outline: none;
+    }
+
+    &__radio {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__radioItem {
+        margin-right: 14px;
+        margin-top: 7px;
+    }
+
+    &__subtitle {
+        font-size: 12px;
+        line-height: 14px;
+        color: #7e7e7e;
+        margin-top: 4px;
+        margin-left: 12px;
+    }
+
+    &__file {
+        display: none;
+    }
+
+    &__uploadWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__upload {
+        display: flex;
+    }
+
+    &__btnUpload {
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.87);
+        border-radius: 4px 0px 0px 4px;
+        padding: 8px;
+        background-color: transparent;
+    }
+
+    &__loader {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 25px 0;
+    }
+
+    &__submit {
+        align-self: center;
+    }
+
+    &__errorMsg {
+        color: red;
+        text-align: center;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    &__errorField {
+        border-color: red;
+    }
+}

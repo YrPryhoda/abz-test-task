@@ -1,0 +1,25 @@
+@import "../../assets/styles/variables.scss";
+
+.btn {
+    cursor: pointer;
+    background-color: $yellow;
+    border-radius: 28px;
+    padding: 8px 24px;
+    border: none;
+    outline: none;
+    color: #000;
+    transition: background-color 0.6s;
+
+    &:hover {
+        background-color: darken($yellow, 15%);
+    }
+
+    &_disabled {
+        background-color: $grey;
+        color: #fff;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+}

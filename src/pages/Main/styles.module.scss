@@ -1,0 +1,74 @@
+@import "../../assets/styles/variables.scss";
+
+.welcome {
+    height: calc(100vh - 58px);
+    background-image: url("../../assets/images/pexels-alexandr-podvalny-1227513.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-size: cover;
+    position: relative;
+
+    &__wrapper {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        @media screen and (max-width: 768px) {
+            padding: 40px 16px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 380px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 21px;
+        font-weight: 400;
+        line-height: 40px;
+    }
+
+    &__text {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+}
+
+.section {
+    margin-top: 90px;
+    padding: 50px 32px 0 32px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__mb100 {
+        margin-bottom: 100px;
+    }
+
+    &__btn {
+        margin-top: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 50px 16px 0 16px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 50px 60px 0 60px;
+    }
+}
