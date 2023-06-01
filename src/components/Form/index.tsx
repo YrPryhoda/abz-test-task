@@ -17,6 +17,7 @@ const MAX_SIZE = 5 * 1024 * 1024;
 const Form = ({ positions, onSubmit }: IProps) => {
   const uploadRef = useRef<HTMLInputElement | null>(null);
 
+  const [sendLoading, setSendLoading] = useState(false);
   const [formDisabled, setFormDisabled] = useState(true);
   const [errors, setError] = useState<{ [key: string]: string }>({});
   const [file, setFile] = useState<File | null>(null);
@@ -65,8 +66,10 @@ const Form = ({ positions, onSubmit }: IProps) => {
       return setError({ ...errors, ...formErrors });
     }
 
+    setSendLoading(true);
     await onSubmit(form, file!);
     resetForm();
+    setSendLoading(false);
   };
 
   const handlerFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -138,6 +141,14 @@ const Form = ({ positions, onSubmit }: IProps) => {
       </label>
     );
 
+  if (sendLoading) {
+    return (
+      <div className={styles.section}>
+        <Preloader />;
+      </div>
+    );
+  }
+
   return (
     <form className={styles.form}>
       <label className={styles.form__field}>
@@ -202,7 +213,7 @@ const Form = ({ positions, onSubmit }: IProps) => {
           <input
             type="text"
             readOnly
-            placeholder={file ? file.name : "Upload your photo"}
+            placeholder={file ? file?.name : "Upload your photo"}
             className={`${styles.form__item} ${styles.form__item_disabled} ${
               errors && errors["photo"] ? styles.form__errorField : ""
             }`}

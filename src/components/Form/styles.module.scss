@@ -1,5 +1,13 @@
 @import "../../assets/styles/variables.scss";
 
+.section {
+    margin-top: 32px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .form {
     display: flex;
     flex-direction: column;
