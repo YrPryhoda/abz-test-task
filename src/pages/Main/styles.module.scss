@@ -2,7 +2,7 @@
 
 .welcome {
     height: calc(100vh - 58px);
-    background-image: url("../../assets/images/pexels-alexandr-podvalny-1227513.jpeg");
+    background-image: url("../../assets/images/pexels-alexandr-podvalny-1227513.webp");
     background-position: center;
     background-repeat: no-repeat;
     margin: 0 auto;
@@ -63,6 +63,10 @@
 
     &__btn {
         margin-top: 50px;
+    }
+
+    &__img {
+        margin-top: 32px;
     }
 
     @media screen and (max-width: 768px) {

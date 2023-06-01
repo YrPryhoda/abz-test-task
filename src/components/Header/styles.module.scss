@@ -5,6 +5,10 @@
     justify-content: center;
     background-color: #fff;
 
+    &__logo {
+        width: 104px;
+    }
+
     &__content {
         display: flex;
         flex: 1;

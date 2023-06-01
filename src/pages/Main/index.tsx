@@ -46,9 +46,9 @@ const Main = () => {
     }
 
     setUsers((prevState) => {
-      prevState.pop();
+      const firstPage = prevState.slice(0, 5);
 
-      return [userData.user, ...prevState];
+      return [userData.user, ...firstPage];
     });
 
     setFormSent(true);
@@ -165,7 +165,7 @@ const Main = () => {
                 className={`${styles.section__content} ${styles.section__mb100}`}
               >
                 <Title title="User successfully registered" />
-                <img alt="Registration completed" src={registerImg} />
+                <img alt="Registration completed" src={registerImg} className={styles.section__img}/>
               </div>
             )}
           </div>
