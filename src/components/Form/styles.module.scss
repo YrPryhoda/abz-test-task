@@ -47,6 +47,8 @@
     &__radioItem {
         margin-right: 14px;
         margin-top: 7px;
+        transform: scale(1.5);
+        border-color: $blue;
     }
 
     &__subtitle {
